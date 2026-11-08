@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7f6">
+  <title>StudentHub — Pateros Technological College</title>
+  <meta name="description" content="Your campus, connected. Submit student service requests, read announcements, and keep up with your schedule at Pateros Technological College.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 13v-2Z"/><path d="m11.6 14.2 1.8 6.1-3.3 1-2.2-7.5M21 12h1"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21a7 7 0 0 1 14 0"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="StudentHub home">
+        <img class="brand-logo" src="assets/ptc-logo.jpg" alt="Pateros Technological College seal">
+        <span class="brand-name">student<span>hub</span></span>
+      </a>
+
+      <div class="school-switcher">
+        <img class="school-crest" src="assets/ptc-logo.jpg" alt="">
+        <div class="school-name"><strong>Pateros Tech</strong><span>Student portal</span></div>
+        <svg class="icon switch-chevron"><use href="#i-chevron"/></svg>
+      </div>
+
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-page="Overview"><svg class="icon"><use href="#i-grid"/></svg><span>Overview</span></button>
+        <button class="nav-link" data-page="My requests"><svg class="icon"><use href="#i-file"/></svg><span>My requests</span><span class="nav-count" id="nav-count">3</span></button>
+        <button class="nav-link" data-page="Schedule"><svg class="icon"><use href="#i-calendar"/></svg><span>Schedule</span></button>
+        <button class="nav-link" data-page="Announcements"><svg class="icon"><use href="#i-megaphone"/></svg><span>Announcements</span><span class="nav-dot"></span></button>
+      </nav>
+
+      <div class="nav-label resources-label">RESOURCES</div>
+      <nav class="main-nav" aria-label="Student resources">
+        <button class="nav-link" data-page="Student handbook"><svg class="icon"><use href="#i-book"/></svg><span>Student handbook</span></button>
+        <button class="nav-link" data-page="Help center"><svg class="icon"><use href="#i-help"/></svg><span>Help center</span></button>
+      </nav>
+
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-help">
+        <div class="help-decoration decoration-one"></div><div class="help-decoration decoration-two"></div>
+        <div class="help-icon"><svg class="icon"><use href="#i-help"/></svg></div>
+        <strong>Need a hand?</strong>
+        <p>Our student services team is here to help you out.</p>
+        <button class="help-button" data-page="Help center">Visit help center <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </div>
+      <button class="profile-card" id="profile-button">
+        <span class="avatar avatar-sidebar" id="sidebar-avatar">PT</span><span class="profile-info"><strong id="sidebar-account-name">Guest</strong><small id="sidebar-account-role">Not signed in</small></span><span class="profile-menu" id="sidebar-account-action">↗</span>
+      </button>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" id="mobile-menu" aria-label="Open menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+        <div class="breadcrumb"><span>Student portal</span><svg class="icon"><use href="#i-chevron"/></svg><strong id="breadcrumb-current">Overview</strong></div>
+        <div class="topbar-actions">
+          <label class="search-box"><svg class="icon"><use href="#i-search"/></svg><input id="global-search" type="search" placeholder="Search anything..." aria-label="Search requests and announcements"><kbd>⌘ K</kbd></label>
+          <div class="notification-wrap"><button class="icon-button notification-button" id="notification-button" aria-label="Notifications"><svg class="icon"><use href="#i-bell"/></svg><i></i></button><div class="notification-popover" id="notification-popover"><strong>You're all caught up!</strong><span>New updates will show up here.</span></div></div>
+          <span class="topbar-divider"></span>
+          <button class="button button-primary login-trigger" id="login-trigger"><svg class="icon"><use href="#i-user"/></svg><span id="login-button-label">Log in</span></button>
+          <div class="account-menu-wrap">
+            <button class="topbar-user signed-in-user" id="topbar-user" aria-haspopup="true" aria-expanded="false" aria-controls="account-popover" hidden><span class="avatar" id="topbar-avatar">PT</span><span class="user-name" id="topbar-account-name"></span><svg class="icon"><use href="#i-chevron"/></svg></button>
+            <section class="account-popover" id="account-popover" aria-label="Account profile" hidden>
+              <div class="account-popover-profile"><span class="avatar" id="profile-avatar">PT</span><div class="account-popover-info"><strong id="profile-name"></strong><span id="profile-email"></span><small id="profile-role"></small></div></div>
+              <button class="account-signout" id="account-signout" type="button">Sign out</button>
+            </section>
+          </div>
+        </div>
+      </header>
+
+      <div class="page-content">
+        <section class="welcome-row">
+          <div><div class="date-line"><span class="date-dot"></span><span id="today-date">MONDAY, OCTOBER 21, 2024</span></div><h1 id="welcome-heading">Welcome to StudentHub <span class="wave">✳</span></h1><p class="welcome-subtitle">Here’s what’s happening around your campus today.</p></div>
+          <button class="button button-primary" id="new-request-button"><svg class="icon"><use href="#i-plus"/></svg> New request</button>
+        </section>
+
+        <section class="hero-banner">
+          <div class="hero-content">
+            <span class="hero-eyebrow"><span class="sparkle">✳</span> YOUR CAMPUS, CONNECTED</span>
+            <h2>One less thing<br>to worry about.</h2>
+            <p>From enrollment forms to campus services, take care of it all right here.</p>
+            <button class="hero-cta" id="hero-request-button">Submit a request <span>↗</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-sun"></div><div class="art-arch"></div><div class="art-building"><div class="building-roof"></div><div class="building-body"><div class="building-sign">PTC</div><div class="building-windows"><i></i><i></i><i></i></div><div class="building-columns"><i></i><i></i><i></i></div><div class="building-steps"></div></div></div>
+            <div class="art-plant plant-left"><i></i><i></i><i></i><b></b></div><div class="art-plant plant-right"><i></i><i></i><i></i><b></b></div>
+            <div class="art-paper"><span></span><span></span><span></span><b>✓</b></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          </div>
+          <div class="hero-bottom-line"></div>
+        </section>
+
+        <section class="stats-grid" aria-label="Request summary">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon stat-violet"><svg class="icon"><use href="#i-file"/></svg></span><span class="stat-trend">↗ &nbsp;This semester</span></div><div class="stat-label">Total requests</div><div class="stat-value" id="total-stat">12</div><div class="stat-foot"><span class="stat-foot-dot violet-dot"></span> Across all services</div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon stat-amber"><svg class="icon"><use href="#i-clock"/></svg></span><span class="stat-pulse"></span></div><div class="stat-label">In progress</div><div class="stat-value" id="progress-stat">2</div><div class="stat-foot"><span class="stat-foot-dot amber-dot"></span> Being taken care of</div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon stat-green"><svg class="icon"><use href="#i-check"/></svg></span><span class="stat-mini-check">✓</span></div><div class="stat-label">Completed</div><div class="stat-value" id="completed-stat">8</div><div class="stat-foot"><span class="stat-foot-dot green-dot"></span> All good, all done</div></article>
+          <article class="stat-card stat-next"><div class="stat-top"><span class="stat-icon stat-blue"><svg class="icon"><use href="#i-calendar"/></svg></span><span class="next-tag">UP NEXT</span></div><div class="stat-label">Next on your schedule</div><div class="next-title">Academic advising</div><div class="stat-foot"><span class="stat-foot-dot blue-dot"></span> Today, 2:30 PM · Guidance Office</div></article>
+        </section>
+
+        <div class="dashboard-grid">
+          <section class="panel requests-panel" id="requests-section">
+            <div class="panel-header"><div><div class="panel-kicker">KEEP THINGS MOVING</div><h2>Your recent requests</h2><p>A little update goes a long way.</p></div><button class="text-link" id="view-requests">View all <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+            <div class="request-filters"><div class="request-filter-tabs" role="tablist"><button class="filter-tab active" data-filter="All">All <span>3</span></button><button class="filter-tab" data-filter="In progress">In progress</button><button class="filter-tab" data-filter="Completed">Completed</button></div><button class="filter-icon-button" id="filter-button" aria-label="Filter requests"><svg class="icon"><use href="#i-plus"/></svg></button></div>
+            <div class="request-list" id="request-list"></div>
+            <button class="mobile-view-all text-link" id="view-requests-mobile">View all requests <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </section>
+
+          <section class="panel announcements-panel" id="announcements-section">
+            <div class="panel-header announcement-heading"><div><div class="panel-kicker">THE LATEST</div><h2>Campus updates</h2></div><button class="round-arrow" aria-label="View announcements" id="view-announcements"><svg class="icon"><use href="#i-arrow"/></svg></button></div>
+            <div class="announcement-list">
+              <article class="announcement-item"><div class="announcement-meta"><span class="announcement-badge badge-academic">ACADEMIC</span><span>2 hours ago</span></div><h3>Enrollment for 2nd semester is now open</h3><p>Plan your next semester. Enrollment runs until November 8.</p><button class="announcement-link" data-announcement="Enrollment for 2nd semester is now open">Read announcement <span>↗</span></button></article>
+              <article class="announcement-item"><div class="announcement-meta"><span class="announcement-badge badge-campus">CAMPUS LIFE</span><span>Yesterday</span></div><h3>PTC Foundation Week — save the date!</h3><p>A week of activities, competitions, and campus festivities awaits.</p><button class="announcement-link" data-announcement="PTC Foundation Week — save the date!">Read announcement <span>↗</span></button></article>
+              <article class="announcement-item announcement-last"><div class="announcement-meta"><span class="announcement-badge badge-services">STUDENT SERVICES</span><span>Oct 18</span></div><h3>Updated library hours for midterms</h3><p>The library will stay open until 8:00 PM through midterm week.</p><button class="announcement-link" data-announcement="Updated library hours for midterms">Read announcement <span>↗</span></button></article>
+            </div>
+            <button class="all-announcements" id="all-announcements">All announcements <svg class="icon"><use href="#i-arrow"/></svg></button>
+          </section>
+        </div>
+
+        <section class="schedule-strip">
+          <div class="schedule-icon"><svg class="icon"><use href="#i-calendar"/></svg></div><div class="schedule-copy"><span>DON'T FORGET</span><strong>Academic advising appointment</strong><small><svg class="icon"><use href="#i-clock"/></svg> Today, 2:30 PM <i></i><svg class="icon"><use href="#i-pin"/></svg> Guidance Office, Room 204</small></div><div class="schedule-reminder"><span class="reminder-dot"></span> In 3 hours</div><button class="schedule-action" id="schedule-action" aria-label="View schedule"><svg class="icon"><use href="#i-arrow"/></svg></button>
+        </section>
+
+        <footer class="page-footer"><span>© 2024 Pateros Technological College</span><span><a href="#" data-footer="Privacy policy">Privacy</a><i></i><a href="#" data-footer="Terms of use">Terms</a><i></i><a href="#" data-page="Help center">Support</a></span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="request-modal" aria-hidden="true">
+    <section class="request-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header"><div class="modal-heading-icon"><svg class="icon"><use href="#i-file"/></svg></div><button class="modal-close icon-button" id="close-modal" aria-label="Close dialog"><svg class="icon"><use href="#i-close"/></svg></button></div>
+      <div class="modal-eyebrow">STUDENT SERVICES</div><h2 id="modal-title">What can we help with?</h2><p class="modal-subtitle">Tell us a little about your request and the right team will take it from here.</p>
+      <form id="request-form">
+        <label class="form-label" for="request-type">Request type <span>*</span></label>
+        <select id="request-type" name="type" required><option value="" disabled selected>Select a service</option><option>Certificate of Enrollment</option><option>Transcript of Records</option><option>Good Moral Certificate</option><option>Academic Advising</option><option>Tuition &amp; Payments</option><option>Other concern</option></select>
+        <label class="form-label" for="request-subject">Subject <span>*</span></label><input id="request-subject" name="subject" required maxlength="70" placeholder="e.g. Request for enrollment certificate">
+        <label class="form-label" for="request-details">Additional details <span class="optional">(optional)</span></label><textarea id="request-details" name="details" rows="3" maxlength="500" placeholder="Anything else we should know?"></textarea>
+        <div class="form-note"><svg class="icon"><use href="#i-clock"/></svg> Most requests are reviewed within 2–3 school days. Wait 30 seconds between submissions to prevent spam.</div>
+        <div class="modal-actions"><button type="button" class="button button-secondary" id="cancel-modal">Cancel</button><button type="submit" class="button button-primary">Submit request <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+      </form>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="login-modal" aria-hidden="true">
+    <section class="request-modal login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <div class="modal-header"><div class="modal-heading-icon"><img src="assets/ptc-logo.jpg" alt=""></div><button class="modal-close icon-button" id="close-login-modal" aria-label="Close dialog"><svg class="icon"><use href="#i-close"/></svg></button></div>
+      <div class="modal-eyebrow">PATEROS TECHNOLOGICAL COLLEGE</div><h2 id="login-title">Welcome to StudentHub</h2><p class="modal-subtitle">Sign in with your official PTC email to continue.</p>
+      <form id="login-form" novalidate>
+        <label class="form-label" for="login-role">Account type <span>*</span></label>
+        <select id="login-role" name="role" required><option value="Student" selected>Student</option><option value="Admin">Admin</option></select>
+        <label class="form-label" for="login-email">PTC email address <span>*</span></label>
+        <input id="login-email" name="email" type="email" autocomplete="username" required title="Use your official @paterostechnologicalcollege.edu.ph email address" placeholder="you@paterostechnologicalcollege.edu.ph" aria-describedby="login-email-hint">
+        <small class="login-hint" id="login-email-hint">Only @paterostechnologicalcollege.edu.ph email addresses are accepted.</small>
+        <label class="form-label" for="login-password">Password <span>*</span></label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password">
+        <p class="login-demo-note"><strong>Demo sign-in:</strong> This prototype checks the email domain but does not verify passwords. Connect an authentication service before using real accounts.</p>
+        <p class="login-error" id="login-error" role="alert" hidden></p>
+        <div class="modal-actions"><button type="button" class="button button-secondary" id="cancel-login">Cancel</button><button type="submit" class="button button-primary">Log in <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+      </form>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"><span class="toast-check"><svg class="icon"><use href="#i-check"/></svg></span><span id="toast-message">Request submitted successfully.</span></div>
+  <script src="app.js"></script>
+</body>
+</html>
